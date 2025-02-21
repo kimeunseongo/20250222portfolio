@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0, user-scalable=no">
+<title>HelloMy</title>
+<link rel="shortcut icon" type="image/png" sizes="32x32" href="img/favicon.ico">
+<script src="/js"></script>
+<!--제이쿼리-->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+<!--lenis 부드러운 스크롤-->
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
+<!-- GSAP library and TextPlugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+<!-- swiper 라이브러리 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- lottie link -->
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<!---css/js링크--->
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+<style>
+
+
+
+</style>
+<body>
+<!--1.인트로 애니메이션 -->
+<!-- <div id="transition-overlays" > -->
+  <div id="transition-overlays" >
+  <div class='transition-overlay overlay-second'></div>
+  <div class='transition-overlay overlay-main'></div>
+</div>
+<!-- <div class="intro_wrap" > -->
+  <div class="intro_wrap" >
+    <div class="intro_div">
+      <h1 id="myText"></h1>
+      <!--로티캐릭터 -->
+      <dotlottie-player src="https://lottie.host/2cccbbce-a4b4-4bfa-acbd-10832eaa80e6/69pv5DaeCK.lottie" class="intro_character" background="transparent" speed="1" style="width: 300px; height: 300px"  autoplay></dotlottie-player>
+    </div> 
+</div>
+
+
+<!--메인페이지시작-->
+<div class="wrap">
+    <!--1.큰메인div-->
+    <div class="main1" id="main1">
+      <div class="main_bigtxt" id="main_bigtxt">
+        <h1><span>I</span><span>'</span><span>m</span> <span>R</span><span>e</span><span>a</span><span>d</span><span>y</span><span>!</span></h1>
+        <h2>준비된 웹퍼블리셔 김은선입니다</h2>
+        <!---다크/화이트 모드 체크박스-->
+        <label class="switch">
+          <input type="checkbox">
+          <span class="switch_slider"></span>
+        </label>
+      </div>
+        <!---1.마스터메뉴--->
+        <nav id="parallax__nav">
+          <ul>
+              <li><a href="#main_bigtxt" class="active">메인으로</a></li>
+              <li><a href="#section1">프로필</a></li>
+              <li><a href="#section2">프로젝트</a></li>
+              <li><a href="#section3">포트폴리오</a></li>
+
+          </ul>
+        </nav>
+          <div class="main_subtxt">
+            <ul>
+              <li>010-4563-2855</li>
+              <li>dmstjs7000@naver.com</li>
+            </ul>
+            <ul>
+              <li>KIM EUNSEON</li>
+              <li>WEB PUBLISHER</li>
+            </ul>
+          </div>
+        <!--2.section1 시작 프로필 -->
+        <section class="section1" id="section1">
+          <div class="sec_title">
+            <h3>프로필</h3>
+          </div>
+          <div class="mini_section">
+            <!--나의프로필-->
+            <div class="mini_flexdiv">
+              <div class="profile_box">
+                <div class="overlay_blank"></div>
+                <img class="profile_bg" src="img/profile_bg.svg" alt="프로필사진">
+                <img class="profile_face" src="img/profile_face.svg" alt="프로필사진">
+                <div class="profile_detail">
+                  <img class="profile_name" src="img/profile_name.svg" alt="프로필사진">
+                  <!-- <h1>KIM EUNSEON</h1>
+                  <h4>김은선</h4> -->
+                  <table class="profile_table">
+                    <tbody>
+                      <tr>
+                        <td>생년월일</td>
+                        <td>1996.12.19</td>
+                      </tr>
+                      <tr>
+                        <td>주소</td>
+                        <td>하남시</td>
+                      </tr>
+                      <tr>
+                        <td>전화번호</td>
+                        <td>010-4563-2855</td>
+                      </tr>
+                      <tr>
+                        <td>이메일</td>
+                        <td>dmstjs7000@naver.com</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!--소개-->
+            <div class="mini_flexdiv">
+              <div class="introduce_detail">
+                <div class="introduce_txt">
+                  안녕하세요 준비된 웹퍼블리셔 김은선입니다! <br>
+                  지속적인 학습을 위해 스터디와 온라인 강의에 적극 참여하고, <br>
+                  낯선 기술에도 포기 하지 않고 메타인지 방식을 활용해 문제 해결 능력을 쌓고 있습니다. <br>
+                  열린 마음으로 피드백을 소중히 여기고,개발 과정에서 항상 개선할 점을 찾기 위해 <br>
+                  노력하고 있습니다.
+                </div>
+                <table class="introduce_table_a">
+                  <thead>
+                    <tr>
+                      <td colspan="2">
+                        <div class="skill_div">
+                          <p>Education</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2015</td>
+                      <td>화홍고등학교 졸업</td>
+                    </tr>
+                    <tr>
+                      <td>2021</td>
+                      <td>경기대학교 조형학과 졸업</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="introduce_table_b">
+                  <thead>
+                    <tr>
+                      <td colspan="2">
+                        <div class="skill_div">
+                          <p>code stacks</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                 
+                      <td>HTML / CSS</td>
+                    </tr>
+                    <tr>
+     
+                      <td>Responsive Web</td>
+                    </tr>
+                    <tr>
+                  
+                      <td>JavaScript / jQuery</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+                <table class="introduce_table_c">
+                  <thead>
+                    <tr>
+                      <td colspan="2">
+                        <div class="skill_div">
+                          <p>Design stacks</p>
+                        </div>
+                        </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                   
+                      <td>Figma</td>
+                    </tr>
+                    <tr>
+                      <td>Photoshop</td>
+                    </tr>
+                    <tr>
+                      <td> Illustrator</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="introduce_table_d">
+                  <thead>
+                    <tr>
+                      <td colspan="2">
+                        <div class="skill_div">
+                          <p>Career</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2022.11</td>
+                      <td>(주)LF 네트웍스</td>
+                    </tr>
+                    <tr>
+                      <td>IT팀 인턴</td>
+                      <td>2개월 근무</td>
+                    </tr>
+                    <tr>
+                      <td>2023.02</td>
+                      <td>모은넷 </td>
+                    </tr>
+                    <tr>
+                      <td>웹디자이너 & 퍼블리셔</td>
+                      <td>2년 2개월 근무</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="introduce_table_d">
+                  <thead>
+                    <tr>
+                      <td colspan="2">
+                        <div class="skill_div">
+                          <p>Library</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Swiper</td>
+                    </tr>
+                    <tr>
+                      <td>Slick</td>
+                    </tr>
+                    <tr>
+                      <td>Lenis</td>
+                    </tr>
+                    <tr>
+                      <td>Aos</td>
+                    </tr>
+                    <tr>
+                      <td>Gsap</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+                <table></table>
+                <div class="lang_skill_div">
+                  <p>📙 편하게 언어를 사용할수 있어요</p>
+                </div>
+                <div class="lang_skill_per">
+                  <h3>HTML/CSS</h3>
+                  <div class="percet_div per90"></div>
+                   <p>마크업 랭귀지를 준수하여 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다.</p>
+                </div>
+                <div class="lang_skill_per">
+                  <h3>Responsive Web</h3>
+                  <div class="percet_div per80"></div>
+                   <p>화면 크기에 맞춰 자동으로 웹 디자인을 조정하여 다양한 기기에서 최적화된 사용자 경험을 제공합니다.</p>
+                </div>
+                <div class="lang_skill_per">
+                  <h3>javascript /jQuery</h3>
+                  <div class="percet_div per80"></div>
+                   <p>웹 페이지에 동적인 기능을 추가하고, 인터랙티브한 요소를 구현하여 웹사이트의 유용성을 향상시킵니다.</p>
+                </div>
+                <div class="lang_skill_div">
+                  <p>📘️ 공부하면서 이런 라이브러리를 사용했어요</p>
+                </div>
+                <div class="lang_skill_per">
+                  <h3>swiper / slick</h3>
+                  <div class="percet_div per80"></div>
+                   <p>슬라이더와 캐러셀을 쉽게 구현하여 이미지나 콘텐츠를 부드럽게 전환할 수 있습니다.</p>
+                </div>
+                <div class="lang_skill_per">
+                  <h3>Gsap</h3>
+                  <div class="percet_div per50"></div>
+                   <p>부드러운 애니메이션을 구현하여 웹사이트에 생동감을 더합니다.</p>
+                </div>
+                <div class="lang_skill_per">
+                  <h3>Lenis</h3>
+                  <div class="percet_div per90"></div>
+                   <p>부드러운 스크롤 경험을 제공하며 웹사이트의 인터페이스를 개선합니다.</p>
+                </div>
+                <div class="lang_skill_div">
+                  <p>📗 코드를 사용해봤어요</p>
+                </div>
+                <div class="lang_skill_per">
+                  <h3>React</h3>
+                  <div class="percet_div per50"></div>
+                   <p>컴포넌트 기반으로 효율적인 UI를 개발하며 유지보수를 용이하게 만듭니다.</p>
+                </div>
+                <div class="lang_skill_per">
+                  <h3>OpenApi</h3>
+                  <div class="percet_div per50"></div>
+                   <p>외부 서비스와 데이터를 주고받을 수 있도록 표준화된 API 인터페이스를 제공하여 시스템 간의 원활한 통신을 가능하게 합니다.</p>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+        </section>
+        <!--2.section2시작 프로젝트 -->
+        <section class="section2" id="section2">
+          <div class="sec_title">
+            <h3>프로젝트</h3>
+          </div>
+          <div class="flex_normal">
+            <div class="flex_normal_div">
+              <h3><img src="/img/plus_icon.svg" alt="플러스아이콘">메인 프로젝트</h3>
+              <div class="tableflex">
+              <table>
+                <thead>
+                  <tr>
+                    <td colspan="2" class="tb_bold">2025</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1등플러스모바일</td>
+                    <td>자사홈페이지 디자인 및 퍼블리싱</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+              <table>
+                <thead>
+                  <tr>
+                    <td colspan="2" class="tb_bold">2024</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>앤텔레콤</td>
+                    <td>셀프케어 앱 리뉴얼 디자인 및 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>앤텔레콤</td>
+                    <td>대리점용 사이트 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>찬스모바일</td>
+                    <td>LG MVNO 알뜰폰 사이트 디자인 및 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>텐모바일</td>
+                    <td>통합충전앱 리뉴얼 디자인 및 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>오파스모바일</td>
+                    <td>KT MVNO 알뜰폰 사이트 디자인 및 퍼블리싱</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+              <table>
+                <thead>
+                  <tr>
+                    <td colspan="2" class="tb_bold">2023</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>한국드론협회</td>
+                    <td>자사 홈페이지 리뉴얼 디자인 및 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>모은넷</td>
+                    <td>자사 홈페이지 리뉴얼 디자인 및 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>이안성형외과</td>
+                    <td>외국인용 자사 홈페이지 퍼블리싱</td>
+                  </tr>
+                  <tr>
+                    <td>크리타</td>
+                    <td>웹에이전시 디자인 및 퍼블리싱</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </div>
+            
+            <div class="flex_normal_div">
+              <h3><img src="/img/plus_icon.svg" alt="플러스아이콘">서브 프로젝트</h3>
+              <div class="tableflex">
+                <table>
+                  <thead>
+                    <tr>
+                      <td colspan="2" class="tb_bold">2024</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>찬스모바일</td>
+                      <td>PC/MOBILE 배너 상세이벤트 디자인</td>
+                    </tr>
+                    <tr>
+                      <td>크리타</td>
+                      <td>푸른빛 법률사무소 / 클린도어 / 테이블페이<br>데모사이트 샘플 디자인</td>
+                    </tr>
+                    <tr>
+                      <td>링크코리아</td>
+                      <td>USIM 판매사이트 퍼블리싱 유지보수</td>
+                    </tr>
+                  </tbody>
+                </table>
+              
+                <table>
+                  <thead>
+                    <tr>
+                      <td colspan="2" class="tb_bold">2023</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>텐모바일</td>
+                      <td>자사홈페이지 퍼블리싱 유지보수</td>
+                    </tr>
+                    <tr>
+                      <td>코나아이</td>
+                      <td>모나모바일 홈페이지 퍼블리싱 유지보수</td>
+                    </tr>
+                    <tr>
+                      <td>드림라인</td>
+                      <td>PC 배너 팝업 이벤트 디자인</td>
+                    </tr>
+                    <tr>
+                      <td>피엠오</td>
+                      <td>셀프개통 퍼블리싱 유지보수</td>
+                    </tr>
+                    <tr>
+                      <td>아시아모바일</td>
+                      <td>홈페이지 전체 유지보수</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--2.section3 시작 메인프로젝트소개 -->
+        <section class="section3" id="section3">
+          <div class="sec_title">
+            <h3>메인프로젝트</h3>
+          </div>
+          <div class="slider_wrap">
+            <div class="swiper-pagination"></div>
+            <div class="swiper_control">
+              <button class="swiper-button-prev btn_prev"></button>
+              <button class="swiper-button-next btn_next"></button>
+            </div>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide1">
+                  <div class="slide-content">
+                    <img src="img/main_port1.svg" alt="메인포트폴리오">
+                    <div class="slide_detail">
+                      <h4>LG MVNO 알뜰폰 사이트 </h4>
+                      <h3>찬스모바일 MVNO 사이트<br>
+                        디자인 및 퍼블리싱</h3>
+                        <p>찬스모바일의 웹사이트는 2030세대를 타겟으로 한 통신 서비스로, 최신 트렌드를 반영한 디자인과 깔끔한 사용자 경험(UX)을 제공합니다.<br>
+                          트렌디하고 세련된 디자인은 젊은 세대의 감각에 맞춰, 빠르고 효율적인 서비스를 제공하는 동시에 시각적으로도 만족감을 줍니다.
+                        </p>
+                        <div class="port_det_btnbox">
+                          <button type="button" onclick="fnMovePage('https://www.figma.com/design/pgkNg3pNz3ffsWlrnfIo9M/(%EA%B9%80%EC%9D%80%EC%84%A0-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4)-%EC%B0%AC%EC%8A%A4%EB%AA%A8%EB%B0%94%EC%9D%BC?node-id=1-6798&t=DueoXMngzdHRkV9p-1')">피그마</button>
+                          <button type="button"  onclick="fnMovePage('https://chancemobile.co.kr/')">웹사이트</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide2">
+                  <div class="slide-content">
+                    <img src="img/main_port2.svg" alt="메인포트폴리오">
+                    <div class="slide_detail">
+                      <h4>KT/LG MVNO 알뜰폰 셀프케어앱 </h4>
+                      <h3>앤텔레콤 셀프케어앱<br>
+                        리뉴얼 디자인 및 퍼블리싱</h3>
+                      <p>앤텔레콤의 웹사이트는 2030세대를 타겟으로 한 통신 서비스로, 최신 트렌드를 반영한 디자인과 깔끔한 사용자 경험(UX)을 제공합니다.<br>
+                        트렌디하고 세련된 디자인은 젊은 세대의 감각에 맞춰, 빠르고 효율적인 서비스를 제공하는 동시에 시각적으로도 만족감을 줍니다.
+                      </p>
+                      <div class="port_det_btnbox">
+                        <button type="button">피그마</button>
+                        <button type="button" class="playstore" onclick="fnMovePage('https://play.google.com/store/apps/details?id=com.nrcom.ntelecommembership&hl=ko')">플레이스토어</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide3">
+                  <div class="slide-content">
+                    <img src="img/main_port3.svg" alt="메인포트폴리오">
+                    <div class="slide_detail">
+                      <h4>KT MVNO 알뜰폰 사이트 </h4>
+                      <h3>오파스모바일 MVNO 사이트<br>
+                        디자인 및 퍼블리싱</h3>
+                      <p>오파스모바일의 KT 알뜰폰 웹사이트는 저렴한 요금제와 다양한 데이터 옵션으로<br>
+                        고객들에게 편리한 통신 서비스를 주력으로 하여 합리적인 가격의 통신요금제를 가입할수있는 MVNO 알뜰폰회사입니다.<br>
+                        *현재 사이트가 운영을 잠시 멈췄습니다. 검색엔진으로 보실 수 있습니다.
+                      </p>
+                      <div class="port_det_btnbox">
+                        <button type="button" onclick="fnMovePage('')">피그마</button>
+                        <button type="button" onclick="fnMovePage('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EC%98%A4%ED%8C%8C%EC%8A%A4%EB%AA%A8%EB%B0%94%EC%9D%BC#lb_api=https%3A%2F%2Fs.search.naver.com%2Fp%2Freview%2F49%2Fsearch.naver%3Fssc%3Dtab.itb.all%26api_type%3D5%26query%3D%25EC%2598%25A4%25ED%258C%258C%25EC%258A%25A4%25EB%25AA%25A8%25EB%25B0%2594%25EC%259D%25BC%26start%3D1%26nx_search_query%3D%26nx_and_query%3D%26nx_sub_query%3D%26ac%3D1%26aq%3D0%26spq%3D0%26sm%3Dtop_hty%26nso%3D%26prank%3D0%26ngn_country%3DKR%26lgl_rcode%3D02117106%26fgn_region%3D%26fgn_city%3D%26lgl_lat%3D37.24835%26lgl_long%3D127.048695%26enlu_query%3DIggCADWAULhsAAAAtdoURqXUdp9ygLuVMM8qJh8lqIxi9AQjitul9%252FFy7flw8jDyMKfGoNLJgDp%252FasaUJlY5yp0kV0srKkiLqCTf0gYDZot7cTB2sND%252FVnRRDHaIQTKWO9FITeIWSzeyMrly7D6sOvnCOxpejCN241p54m0FMyH26zuX86e8OwvFESZSYctowb9uO%252FBs%252FYv%252FivB9LZrPYh3OKdpspw5uD39u3dXuFb%252F%252Bm5RRT623wHj63fXIly6YNi2HcWLZiplQzLhXLdqCH2Ud4CZYHTMR1YCtt0QnpPJnwkOWJgN9xpM%252FLz8VOCk%252FD9%252FUt%252FkG254CPgjN4ih9AXMLi%252BQVVy9ZzXlAUpOmNhMzDCI3JXGq5aJqcxECXAjPu4cjBybG%252BNrim7yd7V3%252BsQ86GZulxN%252F0GakZKIPBBvrVW2IRZKCkfM4kDmsK7yW7AoO1h22e94K9s5T3i8P5UFWnE1iflvrv1Yx1F64%252FFPginazWoyHA8PfgQ6YxfjTnDcOB8grxHoAIn%252BZGB03QpWVfxhG9B8QgTosIbkG6vbvHuWLE9bhXrQ4%252B5sw0rPGJgb%252B%252BqSc%252FBQ1E2yGgRX%252FjORmUmS0Ae824f7oIz7jq%252F%252BnOInZRKEwrx5D3nvwLBGBpNVFQiEf3NJN%252FV7ITfUjiRJstrHP55lXBuhz0U3mWV%252FGK%252Fjhz7IGjvJWrvNHPKBgufJdgHeLWtvzSEobpxaBq8ve8Nj6YF4FsH5GBKg%253D%253D%26enqx_theme%3DIggCAGuCULioAAAAh%252FDtntZaiMLGh3DOFtIyqwb%252BhU63vPSAncA7DcuQWw2UlQi4ld16NhdiDC4lfQWueHKbpcdNZv0iAqp7N2WcJpjxK642uNTWhS8saHH0crY%253D%26abt%3D')">웹사이트</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide4">
+                  <div class="slide-content">
+                    <img src="img/main_port4.svg" alt="메인포트폴리오">
+                    <div class="slide_detail">
+                      <h4>IT 회사소개 사이트 </h4>
+                      <h3>IT 1등플러스모바일<br>
+                        디자인 및 퍼블리싱</h3>
+                      <p>1등플러스모바일의 웹사이트는 2030세대를 타겟으로 한 통신 서비스로, 최신 트렌드를 반영한 디자인과 깔끔한 사용자 경험(UX)을 제공합니다.<br>
+                        트렌디하고 세련된 디자인은 젊은 세대의 감각에 맞춰, 빠르고 효율적인 서비스를 제공하는 동시에 시각적으로도 만족감을 줍니다.
+                      </p>
+                      <div class="port_det_btnbox">
+                        <button type="button">피그마</button>
+                        <button type="button" onclick="fnMovePage('http://www.1stplusmobile.co.kr/')">웹사이트</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--2.section4 시작 포트폴리오 -->
+        <section class="section4" id="section4">
+          <div class="after_slide">
+            <div class="sec_title ">
+              <h3>포트폴리오</h3>
+            </div>
+          </div>
+          
+          <div class="sec_title_detail">
+
+            <h4>메인프로젝트</h4>
+            <p>기여도 100%의 포트폴리오 기업과 유저가 원하는 최고의 문제해결을 통해<br/>
+               우리가 함께 완성한 프로젝트를 소개합니다.</p>
+          </div>
+          <div class="portfolio">
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button" onclick="fnMovePage('https://www.figma.com/design/pgkNg3pNz3ffsWlrnfIo9M/(%EA%B9%80%EC%9D%80%EC%84%A0-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4)-%EC%B0%AC%EC%8A%A4%EB%AA%A8%EB%B0%94%EC%9D%BC?node-id=1-6798&t=DueoXMngzdHRkV9p-1')">피그마</button>
+                  <button type="button" onclick="fnMovePage('https://chancemobile.co.kr/')">웹사이트</button>
+                </div>
+                <img src="img/item1.svg" alt="포트폴리오1">
+              </div>
+              <div>
+                <h3>LGMVNO 찬스모바일  알뜰폰사이트</h3>
+                <p>디자인 및 퍼블리싱 100% VSCODE /FIGMA</p>
+              </div>
+            </div>
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button">피그마</button>
+                  <button type="button" class="playstore"  onclick="fnMovePage('https://play.google.com/store/apps/details?id=com.nrcom.ntelecommembership&hl=ko')">플레이스토어</button>
+                </div>
+                <img src="img/item2.png" alt="포트폴리오2">
+              </div>
+              <div>
+                <h3>앤텔레콤 MVNO 알뜰폰 앱 리뉴얼</h3>
+                <p>리디자인 및 퍼블리싱 100% VSCODE /FIGMA</p>
+              </div>
+            </div>
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button">피그마</button>
+                  <button type="button" onclick="fnMovePage('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EC%98%A4%ED%8C%8C%EC%8A%A4%EB%AA%A8%EB%B0%94%EC%9D%BC#lb_api=https%3A%2F%2Fs.search.naver.com%2Fp%2Freview%2F49%2Fsearch.naver%3Fssc%3Dtab.itb.all%26api_type%3D5%26query%3D%25EC%2598%25A4%25ED%258C%258C%25EC%258A%25A4%25EB%25AA%25A8%25EB%25B0%2594%25EC%259D%25BC%26start%3D1%26nx_search_query%3D%26nx_and_query%3D%26nx_sub_query%3D%26ac%3D1%26aq%3D0%26spq%3D0%26sm%3Dtop_hty%26nso%3D%26prank%3D0%26ngn_country%3DKR%26lgl_rcode%3D02117106%26fgn_region%3D%26fgn_city%3D%26lgl_lat%3D37.24835%26lgl_long%3D127.048695%26enlu_query%3DIggCADWAULhsAAAAtdoURqXUdp9ygLuVMM8qJh8lqIxi9AQjitul9%252FFy7flw8jDyMKfGoNLJgDp%252FasaUJlY5yp0kV0srKkiLqCTf0gYDZot7cTB2sND%252FVnRRDHaIQTKWO9FITeIWSzeyMrly7D6sOvnCOxpejCN241p54m0FMyH26zuX86e8OwvFESZSYctowb9uO%252FBs%252FYv%252FivB9LZrPYh3OKdpspw5uD39u3dXuFb%252F%252Bm5RRT623wHj63fXIly6YNi2HcWLZiplQzLhXLdqCH2Ud4CZYHTMR1YCtt0QnpPJnwkOWJgN9xpM%252FLz8VOCk%252FD9%252FUt%252FkG254CPgjN4ih9AXMLi%252BQVVy9ZzXlAUpOmNhMzDCI3JXGq5aJqcxECXAjPu4cjBybG%252BNrim7yd7V3%252BsQ86GZulxN%252F0GakZKIPBBvrVW2IRZKCkfM4kDmsK7yW7AoO1h22e94K9s5T3i8P5UFWnE1iflvrv1Yx1F64%252FFPginazWoyHA8PfgQ6YxfjTnDcOB8grxHoAIn%252BZGB03QpWVfxhG9B8QgTosIbkG6vbvHuWLE9bhXrQ4%252B5sw0rPGJgb%252B%252BqSc%252FBQ1E2yGgRX%252FjORmUmS0Ae824f7oIz7jq%252F%252BnOInZRKEwrx5D3nvwLBGBpNVFQiEf3NJN%252FV7ITfUjiRJstrHP55lXBuhz0U3mWV%252FGK%252Fjhz7IGjvJWrvNHPKBgufJdgHeLWtvzSEobpxaBq8ve8Nj6YF4FsH5GBKg%253D%253D%26enqx_theme%3DIggCAGuCULioAAAAh%252FDtntZaiMLGh3DOFtIyqwb%252BhU63vPSAncA7DcuQWw2UlQi4ld16NhdiDC4lfQWueHKbpcdNZv0iAqp7N2WcJpjxK642uNTWhS8saHH0crY%253D%26abt%3D')">웹사이트</button>
+                </div>
+                <img src="img/item3.png" alt="포트폴리오3">
+              </div>
+              <div>
+                <h3>KTMVNO오파스모바일 알뜰폰사이트</h3>
+                <p>디자인 및 퍼블리싱 100% VSCODE /FIGMA</p>
+              </div>
+            </div>
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button">피그마</button>
+                  <button type="button" class="playstore" onclick="fnMovePage('https://play.google.com/store/apps/details?id=com.moeunnet.opasmobile&hl=ko')">플레이스토어</button>
+                </div>
+                <img src="img/item4.png" alt="포트폴리오4">
+              </div>
+              <div>
+                <h3>KTMVNO 오파스모바일 셀프케어앱</h3>
+                <p>디자인 및 퍼블리싱 100% VSCODE /FIGMA</p>
+              </div>
+            </div>
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button">피그마</button>
+                  <button type="button"  onclick="fnMovePage('http://www.1stplusmobile.co.kr/')">웹사이트</button>
+              </div>
+                <img src="img/item5.png" alt="포트폴리오5">
+              </div>
+              <div>
+                <h3>IT 솔루션 1등플러스모바일</h3>
+                <p>디자인 및 퍼블리싱 100% VSCODE /FIGMA</p>
+              </div>
+            </div>
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button">피그마</button>
+                  <button type="button" onclick="fnMovePage('https://www.firstsangsa.com/')">웹사이트</button>
+              </div>
+                <img src="img/item6.png" alt="포트폴리오6">
+              </div>
+              <div>
+                <h3>IT 솔루션 퍼스트상사</h3>
+                <p>디자인 및 퍼블리싱 100% VSCODE /FIGMA</p>
+              </div>
+            </div>
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button">피그마</button>
+                  <button type="button">웹사이트</button>
+              </div>
+                <img src="img/item7.png" alt="포트폴리오7">
+              </div>
+              <div>
+                <h3>통합충전앱 텐모바일</h3>
+                <p>리뉴얼 디자인 및 퍼블리싱 100% VSCODE /FIGMA</p>
+              </div>
+            </div>
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button">피그마</button>
+                  <button type="button"  onclick="fnMovePage('http://www.m-n.kr/')">웹사이트</button>
+              </div>
+                <img src="img/item8.png" alt="포트폴리오8">
+              </div>
+              <div>
+                <h3>IT 솔루션 모은넷</h3>
+                <p>디자인 및 퍼블리싱 100% VSCODE /FIGMA</p>
+              </div>
+            </div>
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button">피그마</button>
+                  <button type="button" onclick="fnMovePage('http://www.kdia.re.kr/')">웹사이트</button>
+              </div>
+                <img src="img/item9.png" alt="포트폴리오9">
+              </div>
+              <div>
+                <h3>한국드론협회</h3>
+                <p>디자인 및 퍼블리싱 100% VSCODE /FIGMA</p>
+              </div>
+            </div>
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button" onclick="fnMovePage('https://www.figma.com/design/D6LnvEwnreUp5mpudg3GZB/(%EA%B9%80%EC%9D%80%EC%84%A0-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4)%EC%98%A8%ED%81%AC%EB%A6%AC%ED%83%80?node-id=0-1&t=oFjTehWPth9roVh8-1')">피그마</button>
+                  <button type="button" onclick="fnMovePage('https://oncrita.com/')">웹사이트</button>
+              </div>
+                <img src="img/item10.png" alt="포트폴리오10">
+              </div>
+              <div>
+                <h3>웹에이전시 온크리타</h3>
+                <p>디자인 및 퍼블리싱 100% VSCODE /FIGMA</p>
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="sec_title_detail">
+            <h4>서브 프로젝트</h4>
+            <p>기업과 유저가 원하는 최고의 문제해결을 통해<br/>
+              우리가 함께 완성한 프로젝트를 소개합니다.</p>
+          </div>
+          <div class="portfolio">
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button" onclick="fnMovePage('https://www.figma.com/design/DE92EkSMe2M1qyAwPNQ4eZ/(%EA%B9%80%EC%9D%80%EC%84%A0-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4)-%ED%91%B8%EB%A5%B8%EB%B9%9B%EB%B2%95%EB%A5%A0%EC%82%AC%EB%AC%B4%EC%86%8C?node-id=0-1&t=B1HJoVwqLQxYpjIx-1')">피그마</button>
+
+              </div>
+                <img src="img/item11.png" alt="포트폴리오10">
+              </div>
+              <div>
+                <h3>법률자문 웹사이트 푸른빛 법률사무소</h3>
+                <p>디자인 100% FIGMA</p>
+              </div>
+            </div>
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button" onclick="fnMovePage('https://www.figma.com/design/IWQ77pmWqb15CqZVTxARL1/(%EA%B9%80%EC%9D%80%EC%84%A0-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4)-%ED%85%8C%EC%9D%B4%EB%B8%94%ED%8E%98%EC%9D%B4?node-id=0-1&t=1THtP2t2mA2xpze3-1')">피그마</button>
+
+              </div>
+                <img src="img/item12.png" alt="포트폴리오10">
+              </div>
+              <div>
+                <h3>매장 자동화 솔루션 웹사이트 테이블페이</h3>
+                <p>디자인 100% FIGMA</p>
+              </div>
+            </div>
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button" onclick="fnMovePage('https://www.figma.com/design/4wte6bC5MLuvQE5n6wbLAO/(%EA%B9%80%EC%9D%80%EC%84%A0-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4)-%ED%81%B4%EB%A6%B0%EB%8F%84%EC%96%B4?node-id=0-1&t=oQ4R67ko9yKBFNvF-1')">피그마</button>
+
+              </div>
+                <img src="img/item13.png" alt="포트폴리오10">
+              </div>
+              <div>
+                <h3>청소 웹사이트 클린도어</h3>
+                <p>디자인 100% FIGMA</p>
+              </div>
+            </div>
+            <div class="portfolio_item">
+              <div class="port_img_div">
+                <div class="overlay_port">
+                  <button type="button" onclick="fnMovePage('https://www.figma.com/design/BdYyJAnpuxegBkfISsCerl/(%EA%B9%80%EC%9D%80%EC%84%A0-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4)%ED%8F%AC%ED%8F%AC-%ED%8E%AB%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC?node-id=0-1&t=LNgECSiEUo8C4sYT-1')">피그마</button>
+                  <button type="button"  onclick="fnMovePage('http://pawpaw.redtime.kr/')">웹사이트</button>
+              </div>
+                <img src="img/item14.png" alt="포트폴리오10">
+              </div>
+              <div>
+                <h3>펫라이프스타일 웹사이트 포포</h3>
+                <p>디자인 100%  FIGMA</p>
+              </div>
+            </div>
+          
+          </div>
+
+        </section>
+        <footer>
+          <div class="footer_wrap">
+
+            <div class="marquee">
+              <div class="track">
+                <a href="mailto:jangmary95@gmail.com" class="email-link">
+                  <span class="text -r">Contact me .<span class="-green">Contact me .</span></span>
+                  <span class="text -r">Contact me .<span class="-green">Contact me .</span></span>
+                  <span class="text -r">Contact me .<span class="-green">Contact me .</span></span>
+                  <span class="text -r">Contact me .<span class="-green">Contact me .</span></span>
+                </a>
+              </div>
+            </div>
+
+            <h3>감사합니다.</h3>
+            <p>웹퍼블리셔로 성장하기위해 낯선기술에도 <br>
+              적극적으로 도전하고 , 항상 사용자의 관점에서 생각하며 사용하기 좋은 서비스를 만들고 싶습니다 </p>
+            <hr>
+            <ul>
+              <li>김은선</li>
+              <li>010-4563-2855</li>
+              <li>dmstjs7000@naver.com</li>
+            </ul>
+          </div>
+        </footer>
+    </div>
+
+</div>
+
+
+</body>
+<script>
+
+/*기본 다크모드화이트모드*/
+const checkBox = document.querySelector(".switch input");
+
+checkBox.addEventListener("click", (e) => {
+  if (e.target.checked) {
+    document.documentElement.setAttribute("color-theme", "dark");
+   
+  } else {
+    document.documentElement.setAttribute("color-theme", "light");
+  }
+});
+
+  /*기본 링크열기*/
+  function fnMovePage(url) {
+    console.log("URL 열기:", url); // 디버깅용
+    window.open(url, '_blank');
+}
+
+/*기본 부드러운스크롤*/
+  const lenis = new Lenis();
+
+  lenis.on('scroll', (e) => {
+      console.log(e);
+  })
+
+  function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+
+/*기본 메뉴 네비게이션 */
+let links = gsap.utils.toArray("#parallax__nav ul li a");
+
+links.forEach(link => {
+    let element = document.querySelector(link.getAttribute("href")),
+
+    linkST = ScrollTrigger.create({
+        trigger: element,
+        start: "top top"
+    });
+
+    ScrollTrigger.create({
+        trigger: element,
+        start: "top center",
+        end: "bottom center",
+        onToggle: self => setActive(link)
+    });
+
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        gsap.to(window, {duration: 1, scrollTo: linkST.start, overwrite: "auto"});
+    });
+});
+
+function setActive(link) {
+    links.forEach(el => el.classList.remove("active"));
+    link.classList.add("active");
+}
+
+
+/*1.1 페이지 로드 시 인트로 애니메이션 */
+window.onload = function() {
+introAnimation(); // 인트로 애니메이션 
+};
+
+
+
+/*1.1 인트로 애니메이션*/
+function introAnimation() {
+const result = '김은선의 포트폴리오를<br>방문해주셔서 감사합니다!';
+gsap.registerPlugin(TextPlugin);
+
+// ELEMENTS - 오버레이 요소들 가져오기
+var overlays = document.getElementById("transition-overlays").children;
+
+// CREATE TIMELINES - 오버레이 애니메이션 타임라인 생성
+var overlayTl = gsap.timeline();  // 오버레이 애니메이션을 위한 타임라인 생성
+
+// INIT OVERLAYS - 오버레이 애니메이션 초기화
+for (var i = 0; i < overlays.length; i++) {
+overlayTl.to(overlays[i], ((i + 3) / 2), { 
+  top: '-100%', // 오버레이가 위로 이동
+  ease: Strong.easeInOut // 부드러운 easing 효과
+}, 1)
+.to(overlays[i], { 
+  duration: 0, // 즉시 숨기기
+  display: 'none' // display none 처리
+}, "+=0.2"); // 애니메이션 후 0.2초 딜레이 후 숨기기
+}
+overlayTl.progress(1); // 오버레이 애니메이션 끝난 상태로 설정
+
+/*1.1 인트로 애니메이션*/
+
+// 1. 텍스트 애니메이션
+gsap.to("#myText", { 
+duration: 3, // 애니메이션 duration
+text: result, // 표시할 텍스트 설정
+delay: 1.5,  // 1.5초 후에 텍스트 애니메이션 시작
+ease: "none", // easing 없음
+onComplete: function() {
+  // 텍스트 애니메이션이 끝나면 오버레이 애니메이션을 뒤로 돌림
+  overlayTl.reverse(); // 오버레이 애니메이션 반대로 실행
+}
+});
+
+// 2. .intro_div 숨기기 - 5.7초 후에 숨김 처리
+gsap.to('.intro_div', { 
+duration: 0, 
+delay: 5.8,  // 5.7초 후에 .intro_div 숨김 처리
+display: 'none' // display none 처리
+});
+
+// 3. #transition-overlays 숨기기 - 6.5초 후에 숨김 처리
+gsap.to('#transition-overlays', { 
+duration: 0, 
+delay: 6.5,  // 6.5초 후에 .intro_div 숨김 처리
+display: 'none' // display none 처리
+});
+
+// 4.intro_wrap 서서히 사라지게 하기
+gsap.to('.intro_wrap', { 
+  duration: 2, 
+  opacity: 0,  
+  zIndex: -10,
+  ease: "power3.out",
+  delay: 6.5 // 기존 딜레이 유지 (이전 애니메이션과 동기화)
+});
+
+// 5. 텍스트 애니메이션을 intro_wrap과 동시에 실행
+gsap.to('.main_bigtxt h1 span', { 
+  opacity: 1,
+  y: 0,
+  duration: 0.8,
+  stagger: 0.15,//글자 하나씩 띄우기
+  ease: "Back.easeOut",
+  delay: 7 // intro_wrap과 같은 시간에 실행
+});
+
+// 6. 텍스트 애니메이션을 intro_wrap과 동시에 실행
+gsap.to('.main_bigtxt h2', { 
+  opacity: 1,
+  y: 0,
+  duration: 0.8,
+  ease: "Back.easeOut",
+  delay: 8.5, 
+});
+//7. switch 떠오르기
+gsap.to('.switch', { 
+  opacity: 1,
+  y: 0,
+  duration: 0.8,
+  ease: "Back.easeOut",
+  delay: 9, 
+});
+//8. 양옆 이름이메일 떠오르기
+gsap.to('.main_subtxt ul:first-child', { 
+  opacity: 1,
+  x: 0,
+  duration: 0.8,
+  ease: "Back.easeOut",
+  delay: 9, 
+});
+//9. 양옆 이름이메일 떠오르기
+gsap.to('.main_subtxt ul:last-child', { 
+  opacity: 1,
+  x: 0,
+  duration: 0.8,
+  ease: "Back.easeOut",
+  delay: 9, 
+});
+
+//10. 메뉴네비게이션
+gsap.to('#parallax__nav', { 
+  opacity: 1,
+  y: 0,
+  duration: 0.8,
+  ease: "Back.easeOut",
+  delay: 9, 
+});
+
+}
+
+
+/* 2.각 섹션 대제목 애니메이션 */
+gsap.registerPlugin(ScrollTrigger);
+
+// 모든 섹션을 선택하고 각 섹션의 제목에 대한 애니메이션을 트리거합니다
+gsap.utils.toArray('section').forEach((section) => {
+  const secTitle = section.querySelector('.sec_title>h3');
+  
+  gsap.fromTo(secTitle, 
+    {
+      skewY: 7,
+      opacity: 0,          // 처음에는 보이지 않음
+      y: 100,              // 100px 아래에서 시작
+    },
+    {
+      skewY: 0,
+      opacity: 1,          // 보이게 나타남
+      y: 0,                // 원래 위치로 이동
+      ease: "power4.out",  // 부드러운 easing 효과
+      duration: 1,         // 애니메이션 시간
+      scrollTrigger: {
+        trigger: secTitle, // 각 섹션 제목을 트리거로 사용
+        start: "top 80%",   // 제목이 화면의 80% 위치에 오면 애니메이션 시작
+        end: "bottom top",  // 제목의 하단이 화면 상단에 도달하면 애니메이션 종료
+        scrub: true,        // 스크롤에 따라 애니메이션 진행
+      }
+    });
+});
+
+
+
+ /*3.프로필들어올때 다크모드로 변경 */
+ ScrollTrigger.create({
+  trigger: "#section1", // 트리거로 사용할 요소
+  start: "top 60%", // #section1이 화면 중간에 오면
+  end: "bottom center", // #section1이 화면을 지나칠 때까지
+  onEnter: () => {
+    document.documentElement.setAttribute("color-theme", "dark");
+  },
+  onLeaveBack: () => {
+      document.documentElement.setAttribute("color-theme", "light");
+  },
+});
+
+
+/* 3. 프로필 애니메이션 with fromTo (.section1) */
+gsap.fromTo('.profile_box', { 
+  opacity: 1,           // Starting opacity (fully visible)
+  height: 0,      // Starting height (fully expanded)
+},
+{ 
+  height: "700px",           // Ending height (collapsed)
+  duration:2,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: ".mini_section", // 각 섹션 제목을 트리거로 사용
+    start: "top 60%",   // 제목이 화면의 70% 위치에 오면 애니메이션 시작
+    end: "bottom 30%",  // 제목의 상단이 화면 상단에 도달하면 애니메이션 종료
+    toggleActions: "play none none none",
+  }
+});
+
+//3.1 프로필테이블 대화창 (.section1)
+gsap.to('.introduce_txt', { 
+  opacity: 1,
+  x: 0,
+  duration: 1.5,
+  ease: "power4.out",
+  scrollTrigger: {
+
+    toggleActions: "play none none none",
+    trigger: ".introduce_txt ", // 자기 자신이 트리거 역할
+    start: "top 40%",   // 화면 40% 지점에서 시작
+    end: "bottom 30%",  // 화면 30% 지점에서 끝
+  }
+});
+
+//3.1  프로필테이블 애니메이션 (addclass로 사용)(.section1)
+gsap.fromTo('.introduce_detail table', { 
+  opacity: 1,  
+},
+{ 
+  duration:1,
+  ease: "power4.out",
+  stagger: 0.2, 
+  scrollTrigger: {
+    toggleClass: { 
+      toggleActions: "play none none none",
+      targets: '.introduce_detail table',  // .introduce_detail table에 'active' 클래스 적용
+      className: "active"  // 'active' 클래스 추가 및 제거
+    },
+    trigger: ".mini_section", // 각 섹션 제목을 트리거로 사용
+    start: "top 40%",   // 제목이 화면의 70% 위치에 오면 애니메이션 시작
+    end: "bottom 20%",  // 제목의 상단이 화면 상단에 도달하면 애니메이션 종료
+  }
+});
+
+   //3.1 스킬percentage 애니메이션 (addclass로 사용)(.section1)
+   gsap.utils.toArray('.lang_skill_div').forEach((detailItem) => {
+    gsap.fromTo(detailItem, 
+      { opacity: 0 },  
+      { 
+        opacity: 1,
+        duration: 1,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: detailItem, // 자기 자신이 트리거 역할
+          start: "top 60%",   
+          end: "bottom 20%",
+          onEnter: () => detailItem.classList.add("active2"), // 스크롤 진입 시 클래스 추가
+        }
+      }
+    );
+});
+
+  //3.1 스킬percentage 애니메이션 (addclass로 사용)(.section1)
+gsap.utils.toArray('.lang_skill_per').forEach((detailItem2) => {
+    gsap.fromTo(detailItem2, 
+      { opacity: 0 },  
+      { 
+        opacity: 1,
+        duration: 1,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: detailItem2, // 자기 자신이 트리거 역할
+          start: "top 60%",   
+          end: "bottom 20%",
+          onEnter: () => detailItem2.classList.add("active2"), // 스크롤 진입 시 클래스 추가
+        }
+      }
+    );
+});
+
+
+
+/*4.프로젝트 연혁 소개 (.section2)*/
+gsap.utils.toArray('.flex_normal_div > h3').forEach((title) => {
+    gsap.fromTo(title, 
+      { opacity: 0 },  // 애니메이션 시작값 변경
+      { 
+        opacity: 1,
+        duration: 1,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: title, // 개별 h3가 자기 자신을 트리거로 사용
+          start: "top 55%",   
+          end: "bottom 20%",
+          onEnter: () => title.classList.add("active"), // 스크롤 진입 시 클래스 추가
+        }
+      }
+    );
+});
+
+
+
+
+/*4.프로젝트 연혁 소개 (.section2)*/
+gsap.to('.tableflex', { 
+  opacity: 1,
+  height:"auto",
+  duration:1.5,
+  delay: 0.5,
+  ease: "power4.out",
+  scrollTrigger: {
+        trigger: ".flex_normal_div", // 각 섹션 제목을 트리거로 사용
+        start: "top 50%",   // 제목이 화면의 80% 위치에 오면 애니메이션 시작
+        end: "bottom 30%",  // 제목의 상단top이 화면 상단에 도달하면 애니메이션 종료
+      }
+});
+
+
+
+
+
+
+/*5.메인프로젝트 슬라이드 (.section3)*/
+
+  // Swiper 초기화
+  const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1, // 한 슬라이드씩 보이기
+  preloadImages: true, // 이미지 미리 로드
+  pagination: {
+        el: ".swiper-pagination",
+      },
+  navigation: {
+  nextEl: '.swiper-button-next', // "다음" 버튼 엘리먼트를 Swiper에 연결
+  prevEl: '.swiper-button-prev', // "이전" 버튼 엘리먼트를 Swiper에 연결
+  },
+  speed: 500, // 슬라이드 전환 속도
+  });
+
+  // GSAP와 ScrollTrigger를 활용하여 섹션2 고정 및 슬라이드 동작 제어
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.create({
+    trigger: "#section3 ", // 트리거 엘리먼트 지정
+    start: "top top", // 시작 지점
+    end: () => `+=${window.innerHeight * 2}`, // 화면 높이 * 2 만큼 끝나는 지점 설정
+    pin: true, // 고정
+    scrub: true, // 스크롤에 따라 애니메이션 동기화
+    onUpdate: (self) => {
+      const progress = self.progress.toFixed(2); // 스크롤 진행 상태 (0 ~ 1 값)
+
+      // 진행도에 따라 Swiper 슬라이드 이동
+        if (progress <= 0.25) {
+      swiper.slideTo(0); // 첫 번째 슬라이드로 이동
+    } else if (progress > 0.25 && progress <= 0.50) {
+      swiper.slideTo(1); // 두 번째 슬라이드로 이동
+    } else if (progress > 0.50 && progress <= 0.75) {
+      swiper.slideTo(2); // 세 번째 슬라이드로 이동
+    } else if (progress > 0.75) {
+      swiper.slideTo(3); // 네 번째 슬라이드로 이동
+    }
+    },
+    onEnter: () => {
+      // 클래스 추가와 동시에 부드러운 애니메이션 적용
+      gsap.to('.slider_wrap', {
+
+        duration: 2, // 애니메이션 지속 시간
+        ease: 'ease', // 부드러운 효과
+        onStart: () => {
+          document.querySelector('.swiper-container').classList.add('fullscreen');
+          document.querySelector('.slider_wrap').classList.add('fullscreen');
+          document.querySelector('#section3 .sec_title').classList.add('fullscreen');
+          document.querySelector('#section3').classList.add('fullscreen');
+        }
+      });
+    },
+    onLeave: () => {
+    // 섹션3(가로 스크롤)이 끝난 후 세로 스크롤로 전환될 때 실행 (아래 포트폴리오이렇게해야 스크롤먹음)
+    animateAfterSlide();
+  },
+    onLeaveBack: () => {
+      // 이전으로 돌아갔을 때 복원
+      gsap.to('.slider_wrap', {
+        // width: '600px',
+        // height: '300px',
+        duration: 2,
+        ease: 'ease',
+        onComplete: () => {
+          document.querySelector('.slider_wrap').classList.remove('fullscreen');
+          document.querySelector('.swiper-container').classList.remove('fullscreen');
+          document.querySelector('#section3 .sec_title').classList.remove('fullscreen');
+          document.querySelector('#section3').classList.remove('fullscreen');
+        }
+      });
+    },
+    
+  });
+
+  /* 5.메인프로젝트 슬라이드 (.section3) */
+// 새로운 함수로 after_slide 섹션의 애니메이션을 제어
+function animateAfterSlide() {
+  const portTitle4 = document.querySelector('.after_slide');//포트폴리오제목
+//포트폴리오제목
+  if (portTitle4) {
+    const secTitle = portTitle4.querySelector('.sec_title>h3');
+
+    gsap.fromTo(secTitle, 
+      {
+        opacity: 0,
+        y: 100,
+        skewY: 7,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        skewY: 0,
+        ease: "power4.out",
+        duration: 1,
+        scrollTrigger: {
+          trigger: secTitle,
+          start: "top 80%",
+          end: "bottom top",
+          scrub: true,
+          
+        }
+      }
+    );
+  }
+
+/* 5.메인프로젝트 슬라이드 (.section3) */
+//포트폴리오하위제목
+   gsap.utils.toArray('.sec_title_detail').forEach((detailItem) => {
+    gsap.fromTo(detailItem,{
+        opacity: 0,
+        y: 100,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+        duration: 1,
+        scrollTrigger: {
+          trigger: detailItem,
+          start: "top 80%",
+          end: "bottom top",
+          scrub: true,
+       
+        }
+      });
+  });
+
+
+}
+
+
+   /*6.섹션4 포트폴리오 아이템 aos 처럼 각 구간에 맞게 떠오르기 (.section4)*/
+    gsap.utils.toArray('.portfolio_item').forEach((portfolioItem) => {
+    gsap.to(portfolioItem, {
+      opacity: 1,
+      y: 0,
+      duration: 1, // 애니메이션 시간
+      ease: "power3.out", // 부드러운 애니메이션 효과
+      scrollTrigger: {
+        trigger: portfolioItem,
+        scrub:true,
+        start: "top 80%", // 화면의 60%에 올 때 애니메이션 시작
+        end: "bottom top", // 화면 하단에 다 올 때 애니메이션 끝
+        toggleActions: "play none none none", // 애니메이션 실행
+      }
+    });
+  });
+
+
+
+</script>
+</html>
